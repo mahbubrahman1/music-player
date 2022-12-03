@@ -4,7 +4,7 @@ import { faPlay, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-i
 
 const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
     const audioRef = useRef(null);
-    const [songInfo, setSongInfo] = useState({ currentTime: null, duration: null });
+    const [songInfo, setSongInfo] = useState({ currentTime: 0, duration: 0 });
 
     // event handler play pause button
     const handlePlaySong = () => {
