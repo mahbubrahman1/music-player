@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Song from './components/Song';
 import Player from './components/Player';
-import data from './data';
+import chillHop from './util';
 import './styles/app.scss';
+import Library from './components/Library';
 
 function App() {
-  const [songs, setSongs] = useState(data());
+  const [songs, setSongs] = useState(chillHop());
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -15,8 +16,11 @@ function App() {
       <Player
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
-        currentSong={currentSong} />
+        currentSong={currentSong}
+      />
+      <Library />
     </div>
+
   );
 }
 
