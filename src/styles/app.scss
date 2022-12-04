@@ -10,6 +10,16 @@ h3 {
     color: #363636
 }
 
+body {
+    font-family: 'Lexend', sans-serif;
+}
+
+h3,
+h4 {
+    font-weight: 400;
+    color: rgb(100, 100, 100)
+}
+
 @import "./song";
 @import "./player";
 @import "./library"
